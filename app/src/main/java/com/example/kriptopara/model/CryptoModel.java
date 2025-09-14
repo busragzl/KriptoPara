@@ -1,4 +1,4 @@
-package com.example.kriptopara;
+package com.example.kriptopara.model;
 
 import com.google.gson.annotations.SerializedName;
 

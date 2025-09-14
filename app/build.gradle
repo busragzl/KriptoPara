@@ -27,8 +27,8 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
 }
-    def retrofitVersion = '2.3.0'
-    def rxJavaVersion = '2.2.6'
+def retrofitVersion = '2.3.0'
+def rxJavaVersion = '2.1.1'
 
 dependencies {
 
@@ -41,12 +41,13 @@ dependencies {
     androidTestImplementation libs.espresso.core
 
 
-    implementation libs.retrofit
-    implementation libs.converter.gson
-    implementation libs.adapter.rxjava2
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
-    implementation libs.rxjava
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
-    implementation libs.recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
 
 }
